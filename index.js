@@ -18,7 +18,7 @@ const questions = [
     {
         type: 'input',
         name: 'letterColor',
-        message: 'What color would you like the letters to be? You may input the name of your color or the hex code of the color',
+        message: 'What color would you like the letters to be? You may input the name of your color or the hex code of the color: ',
     },
     {
         type: 'list',
@@ -29,7 +29,7 @@ const questions = [
     {
         type: 'input',
         name: 'shapeColor',
-        message: 'What color would you like your shape to be? You may input the name of your color or the hex code of the color',
+        message: 'What color would you like your shape to be? You may input the name of your color or the hex code of the color: ',
     },
 ];
 //function that will generate the svg logo and assign in to its own file

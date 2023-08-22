@@ -19,7 +19,7 @@ This app will take in a users input in the command line to generate logo as an S
   After the package is installed, the user must type in "node index" in the terminal, which will begin the questions used to generate the README file. 
 
 ## Demo
- ScreenCastify Video Walkthrough:
+ ScreenCastify Video Walkthrough: https://drive.google.com/file/d/14cE8cNHoUO3s4g_I_UxhPlX9A1XlVXC0/view
 
   
   ## Tech used
