@@ -13,12 +13,12 @@ const questions = [
     {
         type: 'input',
         name: 'text',
-        message: 'Please enter the 3 letters of your choice for your logo: ',
+        message: 'Please enter up to 3 letters of your choice for your logo: ',
     },
     {
         type: 'input',
         name: 'letterColor',
-        message: 'What color would you like the letters to be? You may input the name of your color or the hex code of the color.',
+        message: 'What color would you like the letters to be? You may input the name of your color or the hex code of the color',
     },
     {
         type: 'list',
@@ -29,7 +29,7 @@ const questions = [
     {
         type: 'input',
         name: 'shapeColor',
-        message: 'What color would you like your shape to be? You may input the name of your color or the hex code of the color.',
+        message: 'What color would you like your shape to be? You may input the name of your color or the hex code of the color',
     },
 ];
 //function that will generate the svg logo and assign in to its own file
@@ -41,12 +41,12 @@ function generateFile(fileName, data) {
         console.log('Success! logo.svg file has been generated!')
     })
 };
-
+//function that will render the color and shape that the user chooses for their logo and finally generate the logo.svg file
 const init = () => {
     inquirer.prompt(questions)
         .then((answers) => {
             if (answers.text.length > 3) {
-                console.log('Must be 3 letters only please')
+                console.log('Must be up to 3 letters only please')
             } else {
                 let shape;
                 if (answers.shape === 'circle') {
@@ -61,7 +61,7 @@ const init = () => {
                 shape.renderText(answers.text);
                 shape.setTextColor(answers.letterColor);
                 shape.setColor(answers.shapeColor);
-                generateFile('logo.svg', shape.renderLogo(answers))
+                generateFile('./examples/logo.svg', shape.renderLogo(answers))
             }
         });
 };
